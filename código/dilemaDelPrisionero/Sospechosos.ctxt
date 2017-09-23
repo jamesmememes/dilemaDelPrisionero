@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Sospechosos
+comment1.params=
+comment1.target=java.lang.String\ egoista()
+comment2.params=
+comment2.target=java.lang.String\ ingenuo()
+comment3.params=
+comment3.target=java.lang.String\ aleatorio()
+comment4.params=
+comment4.target=java.lang.String\ imitador()
+comment5.params=
+comment5.target=java.lang.String\ agenteOrinigal()
+numComments=6
