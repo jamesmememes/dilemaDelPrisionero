@@ -12,7 +12,16 @@ public class Sospechosos {
  }
  
  public String aleatorio () { // siempre es al azar
+  int numeroAleatorio = (int)(Math.random()*2);
   String respuesta ="";
+  
+  if (numeroAleatorio == 0) {
+   respuesta = "confieso";   
+  }
+  
+  else {
+    respuesta = "no confieso"; 
+  }
   return respuesta; 
  }
  
