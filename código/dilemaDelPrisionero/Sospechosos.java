@@ -2,12 +2,12 @@ public class Sospechosos {
  
     
  public String egoista () { //siempre confiesa, busca 0 años 
-  String respuesta=""; 
+  String respuesta="confieso"; 
   return respuesta;      
  } 
  
  public String ingenuo () { // nunca confiesa
- String respuesta="";    
+ String respuesta="no confieso";    
  return respuesta; 
  }
  
@@ -15,7 +15,7 @@ public class Sospechosos {
   int numeroAleatorio = (int)(Math.random()*2);
   String respuesta ="";
   
-  if (numeroAleatorio == 0) {
+  if (numeroAleatorio == 0) { // número aleatorio se utiliza para generar una desicion randon de 1/2 posibilidades, 1 ó 0
    respuesta = "confieso";   
   }
   
