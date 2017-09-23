@@ -21,7 +21,7 @@ public class Sospechosos {
   return respuesta;     
  }
  
- public String agenteOrinigal () { // nosotros lo creamos 
+ public String agenteOrinigal () { // estratégia de obtener menor cantidad de años en prisión
   String respuesta =""; 
   return respuesta;    
  }
