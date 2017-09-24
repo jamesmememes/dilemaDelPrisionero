@@ -27,8 +27,6 @@ public class Enfrentamientos {
      enfrentamientos.ingenuo().anyosDeCarcel = (condenaSospechoso2 = 0);
     }
       
-  }; 
-    
-  // prueba 
+  }
  }
 }
