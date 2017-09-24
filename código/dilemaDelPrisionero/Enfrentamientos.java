@@ -1,7 +1,7 @@
-public class Simulacion {
+public class Enfrentamientos {
  Sospechosos enfrentamientos = new Sospechosos (); 
  
- public Simulacion () {
+ public Enfrentamientos () {
   int condenaSospechoso1 = 0;
   int condenaSospechoso2 = 0; 
   if (enfrentamientos.aleatorio().decision == enfrentamientos.ingenuo().decision) {
