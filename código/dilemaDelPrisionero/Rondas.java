@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Rondas
+{
+    public void rondas(){
+        Scanner input = new Scanner(System.in);
+        
+        int numrondas = input.nextInt();
+        
+    }
+    
+
+}
