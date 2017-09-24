@@ -2,6 +2,8 @@ import javax.swing.JOptionPane;
 import java.io.*;
 import java.io.InputStreamReader; 
 import java.io.BufferedReader; 
+import java.io.IOException; 
+import java.util.Scanner; 
 
 public class Interfaz {
 
@@ -28,8 +30,22 @@ public class Interfaz {
        
  InputStreamReader isr = new InputStreamReader(System.in);  // se crea un flujo de entrada de lo que pasa en el sistema
  BufferedReader br = new BufferedReader(isr); // almacenamos lo que estamos leyendo que proviene de isr
- public String solocitarString () {
-  
- return   
+ // Buff.. br = new Buffe..(new InputStreamReader(System.in)); 
+ public String solicitarStringConsola (String mensaje) throws IOException { // porque se pone esto ?
+ String s = "";
+ s = br.readLine(); 
+ return s;   
+ }
+ 
+ public double solicitarDoubleConsola (String mensaje) {
+  Scanner sc = new Scanner(System.in); 
+  double doubleSolicitado = Double.parseDouble(sc.nextLine()); 
+  return doubleSolicitado; 
+ }
+ 
+ public int solicitarIntConsola (String mensaje) {
+  Scanner sc = new Scanner(System.in); 
+  int integerSolicitado = Integer.parseInt(sc.nextLine()); 
+  return integerSolicitado;    
  }
 }
