@@ -1,38 +1,40 @@
 public class Enfrentamientos {
- Sospechosos enfrentamientos = new Sospechosos (); 
+ Sospechosos sospechosos = new Sospechosos (); 
  
  public Enfrentamientos () {
   int condenaSospechoso1, condenaSospechoso2;
-  String vector[] = new String[(sospechosos.ingenuo) (sospechosos.egoista) (sospechosos.aleatorio) (sospechosos.imitador) (sospechosos.agenteOriginal)];
-  int contadorDePosicionDelVect = 0;
- while (contadorDePosicionDelVect < vector.lenght) {
-    
-  while (contadorDePosicionDelVect < vector.lenght) {for (int i = 0; i < vector.lenght; ++i) {
-     String rival = vector[i]; 
-     if (enfrentamientos.aleatorio().decision == rival) {
-      if (enfrentamientos.aleatorio().decision == "confieso") {
-        enfrentamientos.aleatorio().anyosDeCarcel = (condenaSospechoso1 =  6);
-        enfrentamientos.rival().anyosDeCarcel = (condenaSospechoso2 =  6);
+  String vector[] = new String[(sospechosos.ingenuo.decision) (sospechosos.egoista.decision) (sospechosos.aleatorio.decision) (sospechosos.imitador.decision) (sospechosos.agenteOriginal.decision)];
+  int primerEnfrentador = 0;   
+  while (primerEnfrentador < vector.lenght) {
+  String enfrentador = vector[i];     
+      
+   for (int i = 0; i < vector.lenght; ++i) {
+      String rival = vector[i]; 
+     if (enfrentador == rival) {
+      if (enfrentador == "confieso") {
+        enfrentador.anyosDeCarcel = (condenaSospechoso1 =  6);
+        rival.anyosDeCarcel = (condenaSospechoso2 =  6);
       }
    
       else {
-        enfrentamientos.aleatorio().anyosDeCarcel = (condenaSospechoso1 =  1);
-        enfrentamientos.rival().anyosDeCarcel = (condenaSospechoso2 =  1);  
+        enfrentador.anyosDeCarcel = (condenaSospechoso1 =  1);
+        enfrentador.anyosDeCarcel = (condenaSospechoso2 =  1);  
       }
      }
    
     else {
     if (enfrentamientos.aleatorio().decision == "confieso") {
-     enfrentamientos.aleatorio().anyosDeCarcel = (condenaSospechoso1 = 0);
-     enfrentamientos.rival().anyosDeCarcel = (condenaSospechoso2 = 10); 
+     enfrentador.anyosDeCarcel = (condenaSospechoso1 = 0);
+     rival.anyosDeCarcel = (condenaSospechoso2 = 10); 
     }
     
     else {
-     enfrentamientos.aleatorio().anyosDeCarcel = (condenaSospechoso1 = 10);
-     enfrentamientos.rival().anyosDeCarcel = (condenaSospechoso2 = 0);
+     enfrentador.anyosDeCarcel = (condenaSospechoso1 = 10);
+     rival.anyosDeCarcel = (condenaSospechoso2 = 0);
     }
     }         
   }
+  ++enfrentador; 
+  }
  }
-}
 }
