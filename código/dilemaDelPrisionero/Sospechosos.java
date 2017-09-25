@@ -34,6 +34,7 @@ public class Sospechosos {
   int banderaDeInicio = 0; 
   int anyosDeCarcel = 0;
   String decision=""; 
+  String decisionDelOponente =""; 
   
   if (banderaDeInicio == 0) {  // como la primera ronda es aleatorio puse un contador = 0; y automaticamente ingresa le sumo 1
    int numeroAleatorio = (int)(Math.random()*2); // por lo que la siguiente ronda no va a entrar a este if y va pasar directo al else. 
@@ -48,12 +49,17 @@ public class Sospechosos {
   }
   
   else {
+    if (decisionDelOponente == "confesar") {
+     decision = "no confesar"; 
+    }
     
-  }
+    else {
+     decision = "confesar"; 
+    }
   return decision;   
- }
+}
  
- public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
+public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
   int anyosDeCarcel = 0;
   String decision =""; 
   return decision;    

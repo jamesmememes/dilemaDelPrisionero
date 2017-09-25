@@ -18,10 +18,6 @@ public class Interfaz {
   return JOptionPane.showInputDialog(mensaje); 
  }
  
- public double solicitarDouble (String mensaje){
-  return Double.parseDouble(JOptionPane.showInputDialog(mensaje));   
- }
- 
  public int solicitarInt (String mensaje) {
   return Integer.parseInt(JOptionPane.showInputDialog(mensaje));    
  }
@@ -31,16 +27,10 @@ public class Interfaz {
  InputStreamReader isr = new InputStreamReader(System.in);  // se crea un flujo de entrada de lo que pasa en el sistema
  BufferedReader br = new BufferedReader(isr); // almacenamos lo que estamos leyendo que proviene de isr
  // Buff.. br = new Buffe..(new InputStreamReader(System.in)); 
- public String solicitarStringConsola (String mensaje) throws IOException { // porque se pone esto ?
+ public String solicitarStringConsola (String mensaje) throws IOException { 
  String s = "";
  s = br.readLine(); 
  return s;   
- }
- 
- public double solicitarDoubleConsola (String mensaje) {
-  Scanner sc = new Scanner(System.in); 
-  double doubleSolicitado = Double.parseDouble(sc.nextLine()); 
-  return doubleSolicitado; 
  }
  
  public int solicitarIntConsola (String mensaje) {
