@@ -4,6 +4,7 @@ public class contador extends Sospechoso  // mantiene un historial de los años 
      Enfrentamientos enfrentamientos = new Enfrentamientos();   
      int contadorAnyosDeCarcel = (enfrentamientos.Enfrentamientos().condenaSospechoso1); 
      int contadorAnyosDeCarcel2 = (enfrentamientos.Enfrentamientos().condenaSospechoso2); 
+     Sospechosos sospechosos = new Sospechosos(); 
 
         // todos contra todos   // uno contra uno
     
@@ -12,10 +13,9 @@ public class contador extends Sospechoso  // mantiene un historial de los años 
         if (grupal = true){
             
             int totalAnyosDeCarcel = egoista.anyos + ingenuo.anyos + aleatorio.anyos + imitador.anyos;
-            
+           
             int maxValue = 0;
-            int minValue = 800000; 
-            
+            int minValue = 800000;
             /**Hacer un metodo con recursividad para que los anyos de los agentes los 
              * vea, y vaya 1 por 1 verificando si es menor o mayo que el valor actual
              */

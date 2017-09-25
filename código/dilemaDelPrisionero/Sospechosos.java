@@ -1,5 +1,8 @@
+
+import java.util.Random;  
+
 public class Sospechosos {
- 
+
     
  public String egoista () { //siempre confiesa, busca 0 años 
   int anyosDeCarcel = 0; 
