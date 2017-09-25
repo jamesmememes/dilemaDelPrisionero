@@ -4,11 +4,11 @@ public class Enfrentamientos {
  public Enfrentamientos () {
   int condenaSospechoso1, condenaSospechoso2;
   String vector[] = new String[(sospechosos.ingenuo.decision) (sospechosos.egoista.decision) (sospechosos.aleatorio.decision) (sospechosos.imitador.decision) (sospechosos.agenteOriginal.decision)];
-  int primerEnfrentador = 0;   
-  while (primerEnfrentador < vector.lenght) {
+  int Primerenfrentador = 0;   
+  while (Primerenfrentador < vector.length) {
   String enfrentador = vector[i];     
       
-   for (int i = 0; i < vector.lenght; ++i) {
+   for (int i = 0; i < vector.length; ++i) {
       String rival = vector[i]; 
      if (enfrentador == rival) {
       if (enfrentador == "confieso") {
@@ -35,6 +35,7 @@ public class Enfrentamientos {
     }         
   }
   ++enfrentador; 
+  ++primerEnfrentador; 
   }
  }
 }
