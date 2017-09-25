@@ -36,7 +36,7 @@ public class Sospechosos {
   return decision;     
  }
  
- public String agenteOrinigal () { // estratégia de obtener menor cantidad de años en prisión
+ public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
   int anyosDeCarcel = 0;
   String decision =""; 
   return decision;    

@@ -1,23 +1,20 @@
 
-public class contador extends Sospechosos
+public class contador extends Sospechoso  // mantiene un historial de los años de carcel acumulados de cada sospechoso. 
 {
-        /**
-        *Clase de contador, que presenta todos los resultados que se piden de los sospechosos
-        *MODIFICAR o hacer cualquier cambio para que funcione bien :b
-        */
+     Enfrentamientos enfrentamientos = new Enfrentamientos();   
+     int contadorAnyosDeCarcel = (enfrentamientos.Enfrentamientos().condenaSospechoso1); 
+     int contadorAnyosDeCarcel2 = (enfrentamientos.Enfrentamientos().condenaSospechoso2); 
 
-        // Asumiendo que estamos en modo EXPERIMENTO GRUPAL           BTW, ¿Como vamos a diferenciar experimento grupal de especifico?
+        // todos contra todos   // uno contra uno
     
     boolean grupal = true;
     public void totalanyos (){
         if (grupal = true){
-            /**Hacemos en la clase un metodo que cuente los años de carcel
-             * de cada sospechoso;  lo llamamos aca y hacemos la mate
-             */
-            total = egoista.anyos + ingenuo.anyos + aleatorio.anyos + imitador.anyos;
+            
+            int totalAnyosDeCarcel = egoista.anyos + ingenuo.anyos + aleatorio.anyos + imitador.anyos;
             
             int maxValue = 0;
-            int minValue = 800000
+            int minValue = 800000; 
             
             /**Hacer un metodo con recursividad para que los anyos de los agentes los 
              * vea, y vaya 1 por 1 verificando si es menor o mayo que el valor actual
