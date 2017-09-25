@@ -47,7 +47,6 @@ public class Sospechosos {
         decision = "no confieso"; 
      }
   }
-  
   else {
     if (decisionDelOponente == "confesar") {
      decision = "no confesar"; 
@@ -56,7 +55,9 @@ public class Sospechosos {
     else {
      decision = "confesar"; 
     }
-  return decision;   
+    
+  }
+ return decision; 
 }
  
 public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
