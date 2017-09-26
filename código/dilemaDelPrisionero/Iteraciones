@@ -1,0 +1,18 @@
+
+/** Hice una nueva clase pero tal ves lo podriamos poner dentro de rondas
+ */
+public class Iteraciones
+{
+    
+    
+    
+    public int IteracionesGrupal()
+    {
+       int Numiteraciones = (Math.random()*10)+1;  /**Como hacer para que este permita pasarlo a
+       int y permita hacerlo?  Como con los dados.
+       */
+       return Numiteraciones;
+       //Llamara a este metodo cada ves que vayamos a enfrentar personajes entre sí en GRUPAL
+       // Para que haga aleatorio el numero de enfrentamientos
+    }
+}
