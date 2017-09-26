@@ -3,7 +3,7 @@ public class Enfrentamientos {
  
  public Enfrentamientos () {
   int condenaSospechoso1, condenaSospechoso2;
-  String vector[] = new String[(sospechosos.ingenuo.decision) (sospechosos.egoista.decision) (sospechosos.aleatorio.decision) (sospechosos.imitador.decision) (sospechosos.agenteOriginal.decision)];
+  String vector[] = new String[(sospechosos.ingenuo.decision) (sospechosos.egoista.decision) (sospechosos.aleatorio.decision) (sospechosos.imitador.decision)(sospechosos.agentePorcentaje.decision)  (sospechosos.agenteOriginal.decision)];
   int Primerenfrentador = 0;   
   while (Primerenfrentador < vector.length) {
   String enfrentador = vector[i];     
