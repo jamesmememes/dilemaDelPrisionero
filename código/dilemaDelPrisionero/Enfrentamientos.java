@@ -16,7 +16,7 @@ public class Enfrentamientos {
    String enfrentador = vectorDecisiones[posicionDelEnfrentador];  /*para que comience en el primer campo del vector, la posicion 0
    VectorDesiciones es un vector de Strings, saca los Strings de la clase Sospechosos, donde se encuentra un método de cada sospechoso con su comportamiento, 
    dentro de este se encuentra la variable decisión que sera un String, "confieso" o "no confieso". 
-   por eso sería clase.metodo().variable = String. 
+   por eso sería clase.metodo().variable == String. 
    */
       
     for (int i = 0; i < vector.length; ++i) { // menor o menor e igual ?
@@ -24,7 +24,7 @@ public class Enfrentamientos {
        por lo que comienza enfrentandose consigo mismo. */  
       
       int anyosCarcelEnfrentador = vectorAnyosDeCarcel[posicionDelEnfrentador]; /* aquí se hace uso del otro vector, que es un vector de enteros, 
-      siguiendo la lógica pasada de clase.metodo().variable = int, solo que esta vez la variable es anyosDeCarcel que es un Integer.  
+      siguiendo la lógica pasada de clase.metodo().variable == int, solo que esta vez la variable es anyosDeCarcel que es un Integer.  
       NOTA: posicionDelEnfrentador se encuentra en el while, por lo que la posición de este vector se va a mantener hasta que termine el for 
       */
       int anyosCarcelRival = vectorAnyosDeCarcel[i]; // lo mismo que arriba, solo que el contador de este vector lo lleva el for, por lo que va variando. 
