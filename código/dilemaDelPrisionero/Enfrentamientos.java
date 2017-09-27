@@ -10,8 +10,8 @@ public class Enfrentamientos {
       
    for (int i = 0; i < vector.length; ++i) {
       String rival = vector[i]; 
-     if (enfrentador == rival) {
-      if (enfrentador == "confieso") {
+     if (enfrentador.equals (rival)) {
+      if (enfrentador.equals ("confieso")) {
         enfrentador.anyosDeCarcel = (condenaSospechoso1 =  6);
         rival.anyosDeCarcel = (condenaSospechoso2 =  6);
       }
@@ -23,7 +23,7 @@ public class Enfrentamientos {
      }
    
     else {
-    if (enfrentamientos.aleatorio().decision == "confieso") {
+    if (enfrentamientos.aleatorio().decision.equals ("confieso")) {
      enfrentador.anyosDeCarcel = (condenaSospechoso1 = 0);
      rival.anyosDeCarcel = (condenaSospechoso2 = 10); 
     }
