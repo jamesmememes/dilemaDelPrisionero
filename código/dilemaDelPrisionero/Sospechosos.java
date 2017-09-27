@@ -62,7 +62,14 @@ public class Sospechosos {
   }
  return decision; 
 }
+    
+ public String agentePorcentaje () { // estratégia de no confesar, Y LUEGO tiene 90% de hacer lo que hizo el rival y 10% de confesar
+  int anyosDeCarcel = 0;
+  String decision =""; 
+  return decision;    
+ }
  
+    
 public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
   int anyosDeCarcel = 0;
   String decision =""; 
