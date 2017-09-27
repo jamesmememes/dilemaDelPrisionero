@@ -1,57 +1,75 @@
+import java.util.ArrayList;
+
 public class Enfrentamientos {
- Sospechosos sospechosos = new Sospechosos (); 
+ 
  
  public Enfrentamientos () {
   int condenaSospechoso1, condenaSospechoso2;
+  Sospechosos sospechosos = new Sospechosos (); 
+  /* String vectorDecisiones[] = new String[(sospechosos.decisionIngenuo) (sospechosos.decisionEgoista) (sospechosos.decisionAleatorio) + // ESTA VERSIÓN NO FUNCIONO 
+  (sospechosos.decisionImitador) (sospechosos.decisionImitador2) (sospechosos.decisionAgenteOriginal)];
   
-  String vectorDecisiones[] = new String[sospechosos.ingenuo().decision, sospechosos.egoista().decision , sospechosos.aleatorio().decision, +
-  sospechosos.imitador().decision, sospechosos.agenteOriginal().decision];
+  int vectorAnyosDeCarcel[] = new int [(sospechosos.anyosCarcelIngenuo)(sospechosos.anyosCarcelEgoista)(sospechosos.anyosCarcelAleatorio) +  // NO BORRAR 
+  (sospechosos.anyosCarcelImitador)(sospechosos.decisionImitador2)(sospechosos.decisionAgenteOriginal)];  */
   
-  int vectorAnyosDeCarcel[] = new int [sospechosos.ingenuo().anyosDeCarcel , sospechosos.egoista().anyosDeCarcel , sospechosos.aleatorio().anyosDeCarcel , +
-  sospechosos.imitador().anyosDeCarcel , sospechosos.agenteOriginal().anyosDeCarcel];
+  ArrayList<Integer>  anyosDeCarcel = new ArrayList<Integer>(); 
+  anyosDeCarcel.add(sospechosos.anyosCarcelIngenuo); 
+  anyosDeCarcel.add(sospechosos.anyosCarcelEgoista);
+  anyosDeCarcel.add(sospechosos.anyosCarcelAleatorio);                                                  
+  anyosDeCarcel.add(sospechosos.anyosCarcelImitador); 
+  anyosDeCarcel.add(sospechosos.anyosCarcelImitador2);                                                   
+  anyosDeCarcel.add(sospechosos.anyosCarcelAgenteOriginal); 
+  
+  ArrayList<String> decisiones = new ArrayList<String>(); 
+  decisiones.add(sospechosos.decisionIngenuo); 
+  decisiones.add(sospechosos.decisionEgoista);
+  decisiones.add(sospechosos.decisionAleatorio);                                                       
+  decisiones.add(sospechosos.decisionImitador); 
+  decisiones.add(sospechosos.decisionImitador2);
+  decisiones.add(sospechosos.decisionAgenteOriginal); 
   
   int enfrentadores = 0;   
-  while (enfrentadores < vector.length) { // nose si es un menor o menor e igual 
+  while (enfrentadores < 6)  { //intente poner decisiones.length y no me funciono)  
    int posicionDelEnfrentador = 0; 
-   String enfrentador = vectorDecisiones[posicionDelEnfrentador];  /*para que comience en el primer campo del vector, la posicion 0
+   String enfrentador = decisiones.get(posicionDelEnfrentador);  /*para que comience en el primer campo del vector, la posicion 0
    VectorDesiciones es un vector de Strings, saca los Strings de la clase Sospechosos, donde se encuentra un método de cada sospechoso con su comportamiento, 
    dentro de este se encuentra la variable decisión que sera un String, "confieso" o "no confieso". 
    por eso sería clase.metodo().variable == String. 
    */
       
-    for (int i = 0; i < vector.length; ++i) { // menor o menor e igual ?
-      String rival = vectorDecisiones[i]; /* aquí es lo mismo que anteriormente la "i" comienza en el for como un 0, ,por eso vectorDecisiones[i = 0] 
+    for (int i = 0; i < 6; ++i) { // menor o menor e igual ?
+      String rival = decisiones.get(i); /* aquí es lo mismo que anteriormente la "i" comienza en el for como un 0, ,por eso vectorDecisiones[i = 0] 
        por lo que comienza enfrentandose consigo mismo. */  
       
-      int anyosCarcelEnfrentador = vectorAnyosDeCarcel[posicionDelEnfrentador]; /* aquí se hace uso del otro vector, que es un vector de enteros, 
+      int anyosCarcelEnfrentador = anyosDeCarcel.get(posicionDelEnfrentador); /* aquí se hace uso del otro vector, que es un vector de enteros, 
       siguiendo la lógica pasada de clase.metodo().variable == int, solo que esta vez la variable es anyosDeCarcel que es un Integer.  
       NOTA: posicionDelEnfrentador se encuentra en el while, por lo que la posición de este vector se va a mantener hasta que termine el for 
       */
-      int anyosCarcelRival = vectorAnyosDeCarcel[i]; // lo mismo que arriba, solo que el contador de este vector lo lleva el for, por lo que va variando. 
+      int anyosCarcelRival = anyosDeCarcel.get(i); // lo mismo que arriba, solo que el contador de este vector lo lleva el for, por lo que va variando. 
       
       if (enfrentador.equals (rival)) { // aquí compara los Strings de ambos metodos, ejemplo : ingenuo vs aleatorio 
        if (enfrentador.equals ("confieso")) { 
-        anyosCarcelEnfrentador.anyosDeCarcel = (condenaSospechoso1 =  6); /* asigna la cantidad de años de carcel para cada sospechoso, por eso creamos 2 vectores
+        anyosCarcelEnfrentador= (condenaSospechoso1 =  6); /* asigna la cantidad de años de carcel para cada sospechoso, por eso creamos 2 vectores
         ya que necesitabamos uno para los años de carcel. 
         */
-        anyosCarcelRival.anyosDeCarcel = (condenaSospechoso2 =  6);
+        anyosCarcelRival= (condenaSospechoso2 =  6);
        }
    
       else {
-        anyosCarcelEnfrentador.anyosDeCarcel = (condenaSospechoso1 =  1); 
-        anyosCarcelRival.anyosDeCarcel = (condenaSospechoso2 =  1);  
+        anyosCarcelEnfrentador = (condenaSospechoso1 =  1); 
+        anyosCarcelRival = (condenaSospechoso2 =  1);  
        }
      }
    
      else {
-       if (enfrentamientos.aleatorio().decision.equals ("confieso")) {
-         anyosCarcelEnfrentador.anyosDeCarcel = (condenaSospechoso1 = 0);
-         anyosCarcelRival.anyosDeCarcel = (condenaSospechoso2 = 10); 
+       if (enfrentador.equals ("confieso")) {
+         anyosCarcelEnfrentador= (condenaSospechoso1 = 0);
+         anyosCarcelRival = (condenaSospechoso2 = 10); 
        }
     
        else {
-         anyosCarcelEnfrentador.anyosDeCarcel = (condenaSospechoso1 = 10);
-         anyosCarcelRival.anyosDeCarcel = (condenaSospechoso2 = 0);
+         anyosCarcelEnfrentador= (condenaSospechoso1 = 10);
+         anyosCarcelRival= (condenaSospechoso2 = 0);
        }
      }         
     }

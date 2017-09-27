@@ -1,13 +1,24 @@
 #BlueJ class context
 comment0.target=Sospechosos
 comment1.params=
-comment1.target=java.lang.String\ egoista()
-comment2.params=
-comment2.target=java.lang.String\ ingenuo()
+comment1.target=void\ decisionEgoista()
+comment1.text=int\ totalAnyosDeCarcelAcumulados\ \=\ egoista().totalAnyosDeCarcel\ +\ ingenuo().totalAnyosDeCarcel\ +\ aleatorio().totalAnyosDeCarcel\ +\ imitador().totalAnyosDeCarcel\ +\ \r\nimitador2().totalAnyosDeCarcel\ +\ agenteOriginal().totalAnyosDeCarcel;
+comment10.params=anyosDeCarcel
+comment10.target=void\ anyosCarcelAgenteOriginal(int)
+comment2.params=anyosDeCarcel
+comment2.target=void\ anyosCarcelEgoista(int)
 comment3.params=
-comment3.target=java.lang.String\ aleatorio()
-comment4.params=
-comment4.target=java.lang.String\ imitador()
+comment3.target=void\ decisionIngenuo()
+comment4.params=anyosDeCarcel
+comment4.target=void\ anyosCarcelIngenuo(int)
 comment5.params=
-comment5.target=java.lang.String\ agenteOriginal()
-numComments=6
+comment5.target=void\ decisionAleatorio()
+comment6.params=anyosDeCarcel
+comment6.target=void\ anyosCarcelAleatorio(int)
+comment7.params=
+comment7.target=void\ decisionImitador()
+comment8.params=anyosDeCarcel
+comment8.target=void\ anyosCarcelImitador(int)
+comment9.params=
+comment9.target=void\ decisionAgenteOriginal()
+numComments=11

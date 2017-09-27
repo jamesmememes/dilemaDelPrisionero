@@ -2,24 +2,29 @@
 import java.util.Random;  
 
 public class Sospechosos {
-
-    
- public String egoista () { //siempre confiesa, busca 0 años 
-  int anyosDeCarcel = 0; 
-  String decision="confieso"; 
-  return decision;      
+ public int totalAnyosDeCarcel, anyosCarcelEgoista, anyosCarcelIngenuo, anyosCarcelAleatorio, anyosCarcelImitador, anyosCarcelImitador2, anyosCarcelAgenteOriginal; 
+ public String decisionEgoista, decisionIngenuo, decisionAleatorio, decisionImitador, decisionImitador2, decisionAgenteOriginal; 
+ /*int totalAnyosDeCarcelAcumulados = egoista().totalAnyosDeCarcel + ingenuo().totalAnyosDeCarcel + aleatorio().totalAnyosDeCarcel + imitador().totalAnyosDeCarcel + 
+ imitador2().totalAnyosDeCarcel + agenteOriginal().totalAnyosDeCarcel; */
+ public void decisionEgoista () { //siempre confiesa, busca 0 años 
+   String decision="confieso";     
+   this.decisionEgoista = decision; 
  } 
- 
- 
- public String ingenuo () { // nunca confiesa
- int anyosDeCarcel = 0;
- String decision="no confieso";    
- return decision; 
+
+ public void anyosCarcelEgoista (int anyosDeCarcel) {
+  this.anyosCarcelEgoista = anyosDeCarcel; 
  }
  
+ public void decisionIngenuo () { // nunca confiesa 
+   String decision="no confieso";    
+   this.decisionIngenuo = decision; 
+ }
+
+ public void anyosCarcelIngenuo (int anyosDeCarcel) {
+  this.anyosCarcelIngenuo = anyosDeCarcel; 
+ } 
  
- public String aleatorio () { // siempre es al azar
-  int anyosDeCarcel = 0;
+ public void decisionAleatorio () { // siempre es al azar
   int numeroAleatorio = (int)(Math.random()*2);
   String decision ="";
   
@@ -30,12 +35,15 @@ public class Sospechosos {
   else {
     decision = "no confieso"; 
   }
-  return decision; 
+  this.decisionAleatorio = decision; 
  }
- 
- public String imitador () { // copia lo que hizo su rival en el turno anterior, primer turno aleatorio
+  
+  public void anyosCarcelAleatorio (int anyosDeCarcel) {
+  this.anyosCarcelAleatorio = anyosDeCarcel;     
+ }
+
+ public void decisionImitador () { // copia lo que hizo su rival en el turno anterior, primer turno aleatorio
   int banderaDeInicio = 0; 
-  int anyosDeCarcel = 0;
   String decision=""; 
   String decisionDelOponente =""; 
   
@@ -58,16 +66,21 @@ public class Sospechosos {
     else {
      decision = "confesar"; 
     }
-    
-  }
- return decision; 
-}
- 
-public String agenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
-  int anyosDeCarcel = 0;
-  String decision =""; 
-  return decision;    
+    } 
+  
+  this.decisionImitador = decision; 
  }
  
+ public void anyosCarcelImitador ( int anyosDeCarcel) {
+  this.anyosCarcelImitador = anyosDeCarcel; 
+ }
+
+ public void decisionAgenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
+  String decision =""; 
+  this.decisionAgenteOriginal = decision; 
+ }
  
+ public void anyosCarcelAgenteOriginal ( int anyosDeCarcel) {
+ this.anyosCarcelAgenteOriginal = anyosDeCarcel; 
+}
 }
