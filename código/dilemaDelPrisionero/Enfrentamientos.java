@@ -4,11 +4,11 @@ public class Enfrentamientos {
  public Enfrentamientos () {
   int condenaSospechoso1, condenaSospechoso2;
   
-  String vectorDecisiones[] = new String[(sospechosos.ingenuo().decision) (sospechosos.egoista().decision) (sospechosos.aleatorio().decision) +
-  (sospechosos.imitador().decision) (sospechosos.agenteOriginal().decision)];
+  String vectorDecisiones[] = new String[sospechosos.ingenuo().decision, sospechosos.egoista().decision , sospechosos.aleatorio().decision, +
+  sospechosos.imitador().decision, sospechosos.agenteOriginal().decision];
   
-  int vectorAnyosDeCarcel[] = new int [(sospechosos.ingenuo().anyosDeCarcel) (sospechosos.egoista().anyosDeCarcel) (sospechosos.aleatorio().anyosDeCarcel) +
-  (sospechosos.imitador().anyosDeCarcel) (sospechosos.agenteOriginal().anyosDeCarcel)];
+  int vectorAnyosDeCarcel[] = new int [sospechosos.ingenuo().anyosDeCarcel , sospechosos.egoista().anyosDeCarcel , sospechosos.aleatorio().anyosDeCarcel , +
+  sospechosos.imitador().anyosDeCarcel , sospechosos.agenteOriginal().anyosDeCarcel];
   
   int enfrentadores = 0;   
   while (enfrentadores < vector.length) { // nose si es un menor o menor e igual 
