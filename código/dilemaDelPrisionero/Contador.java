@@ -43,7 +43,28 @@ public class contador extends Sospechoso  // mantiene un historial de los años 
              */
    
           
-    
+             //NUEVA EDICIOOOOON         TEEST
+                 
+                 
+                 int vectorAnyosDeCarcel[] = new int [sospechosos.ingenuo().anyosDeCarcel , sospechosos.egoista().anyosDeCarcel , sospechosos.aleatorio().anyosDeCarcel , +
+            sospechosos.imitador().anyosDeCarcel , sospechosos.agenteOriginal().anyosDeCarcel];
+
+            for (int i = 0; i < vector.length; ++i){
+
+                if (i<minValue){
+
+                    minValue = i;
+                }
+
+            }
+
+            for (int j = 0; j < vector.length; ++j){
+              if(i>maxValue){
+
+                maxValue = j; 
+              }
+
+            }
       
         }
     }      
