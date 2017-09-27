@@ -1,3 +1,4 @@
+
 import javax.swing.JOptionPane; 
 import java.io.*;
 import java.io.InputStreamReader; 
@@ -12,18 +13,19 @@ public class MainConsole {
     Interfaz interfaz = new Interfaz (); // cree una instancia de Interfaz, que llame interfaz, con letra minuscula. 
     Sospechosos sospechosos = new Sospechosos (); 
     Scanner input = new Scanner (System.in);
-    String tipoJuego = interfaz.solicitarString("¿Desea el método específico o grupal?\nDigite E para especifico y G para grupal");
+    String tipoJuego = interfaz.solicitarStringConsola("¿Desea el método específico o grupal?\nDigite E para especifico y G para grupal");
      // String tipojuego = input.next(); ya no se necesitaría esto. 
  
     try {
      if (tipoJuego.toLowerCase() == "e"){
-         int numrondas = interfaz.solicitarInt ("Digite el número de rondas que desea en el juego");
+         int numrondas = interfaz.solicitarIntConsola ("Digite el número de rondas que desea en el juego");
          // int numrondas = input.nextInt(); CREO QUE ESTO YA NO SE NECESITA. 
          //Mandar esta variable al metodo que hace las rondas, para que las ejecute de una vez 
         }   
      else{  
-         interfaz.mostrarString("ESCOJA EL PRIMER SOSPECHOSO", "OKAY PAR ACONTINUAR");
-         /*aquí hay que poner un switch*/interfaz.solicitarInt("Escoja al primer sospechoso \n 1 = Ingenuo \n 2 = Egoista \n 3 = Aleatorio \n 4" + 
+         if (tipoJuego.toLowerCase() == "g") {
+         interfaz.mostrarStringConsola("ESCOJA EL PRIMER SOSPECHOSO"); // aún falta crear mostarStringConsola en Interfaz. 
+         /*aquí hay que poner un switch*/interfaz.solicitarIntConsola("Escoja al primer sospechoso \n 1 = Ingenuo \n 2 = Egoista \n 3 = Aleatorio \n 4" + 
          "= Imitador \n 5 = Imitador2 \n 6 = Original");
          
         
@@ -39,13 +41,13 @@ public class MainConsole {
          
          int numiteraciones = input.nextInt();
  
-         //Mandar el valor de numiteraciones a la clase iteraciones para que sepa CUANTAS usar
+        }    //Mandar el valor de numiteraciones a la clase iteraciones para que sepa CUANTAS usar
      }
         
     }
     
     catch (Exception e){ 
-     interfaz.mostrarString("""la letra que dijito no es valida"); 
+     interfaz.mostrarStringConsola("La letra que dijito no es valida","ERROR");  // aún falta crear mostarStringConsola en clase interfaz.
     }
      
  }    

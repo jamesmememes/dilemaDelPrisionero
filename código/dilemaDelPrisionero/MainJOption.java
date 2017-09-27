@@ -6,39 +6,39 @@ import java.io.IOException;
 import java.util.Scanner; 
 
 public class MainJOption {
-  /**Aca lo hice de esta manera, pero podemis invocar 
+  /**Aca lo hice de esta manera, pero podemos invocar 
    * 
    */
  public static void main (String v[]) {
-     String tipojuego = JOptionPane.showInputDialog("¿Desea el método específico o grupal?\nDigite E para especifico y G para grupal");
-     //PONER UN TRY O CATCH PARA AGARRAR cuando pongan otra cosa distinta a E o G!     Al final por que no es tan neceseario.
-     if (tipojuego == "E"){
-         String inputrondas = JOptionPane.showInputDialog("Digite el número de rondas que desea en el juego");
-         
-         int numrondas = Integer.parseInt(inputrondas);
+     Enfrentamientos enfrentamientos = new Enfrentamientos(); 
+     Interfaz interfaz = new Interfaz (); 
+     String tipojuego = interfaz.solicitarString("¿Desea el método específico o grupal?\nDigite E para especifico y G para grupal");
+    
+     try {
+     if (tipojuego.toLowerCase() == "e"){
+         int inputrondas = interfaz.solicitarInt("Digite el número de rondas que desea en el juego");
          
          //Mandar esta variable al metodo que hace las rondas, para que las ejecute de una vez 
         }   
      else{  
-        
-         String sospechoso1 = JOptionPane.showInputDialog("Digite el "); //Aqui va como vamos a identificar a los DOS sospechosos
-         //if java ==1, java.long
+        if (tipojuego.toLowerCase() == "g") {
+         interfaz.mostrarString ("ESCOJA EL PRIMER SOSPECHOSO", "OKAY PARA CONTINUAR"); // aún falta crear mostarStringConsola en Interfaz. 
+         /*aquí hay que poner un switch*/interfaz.solicitarIntConsola("Escoja al primer sospechoso \n 1 = Ingenuo \n 2 = Egoista \n 3 = Aleatorio \n 4" + 
+         "= Imitador \n 5 = Imitador2 \n 6 = Original");
          
-         String sospechoso2 = JOptionPane.showInputDialog("Digite el ");
+          /*Ocupamos a parte de llamarlos, llamar tambieen   al metodo que hace la pelea!! OSEA QUE AQUÍ SE LLAMA A enfrentamientos.enfrentamientos. 
+             Así que de una vez creé la instancia de Enfrentamientos al principio del main, para cuando la vayamos a utilizar. 
+             */
          
-         //Ocupamos a parte de llamarlos, llamar tambieen   al metodo que hace la pelea!!
+          int inputiteraciones = interfaz.solicitarInt("Digite el número de iteraciones que desea"); 
          
-         String inputiteraciones = JOptionPane.showInputDialog("Digite el número de iteraciones que desea");
-        
-         int numiteraciones = Integer.parseInt(inputiteraciones);
-         
-         //Mandar el valor de numiteraciones a la clase iteraciones para que sepa
-         System.exit(0);
+          //Mandar el valor de numiteraciones a la clase iteraciones para que sepa
+          System.exit(0);
+         }
      }
-        /**
-         * SE DEBE PONER UN SYSTEM.OUT POR que estamos usando Joption, lo puse arriba pero por si acaso lo movemos donde se tenga que poner.
-         * 
-         */
- }    
-
     }
+    catch (Exception e) {
+     interfaz.mostrarString("La letra que dijito no es valida", "ERROR"); 
+    }  
+ }    
+}
