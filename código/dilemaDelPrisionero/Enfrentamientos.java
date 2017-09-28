@@ -17,7 +17,7 @@ public class Enfrentamientos {
   anyosDeCarcel.add(sospechosos.anyosCarcelEgoista);
   anyosDeCarcel.add(sospechosos.anyosCarcelAleatorio);                                                  
   anyosDeCarcel.add(sospechosos.anyosCarcelImitador); 
-  anyosDeCarcel.add(sospechosos.anyosCarcelImitador2);                                                   
+  anyosDeCarcel.add(sospechosos.anyosCarcelImitadorConTraicion);                                                   
   anyosDeCarcel.add(sospechosos.anyosCarcelAgenteOriginal); 
   
   ArrayList<String> decisiones = new ArrayList<String>(); 
@@ -25,7 +25,7 @@ public class Enfrentamientos {
   decisiones.add(sospechosos.decisionEgoista);
   decisiones.add(sospechosos.decisionAleatorio);                                                       
   decisiones.add(sospechosos.decisionImitador); 
-  decisiones.add(sospechosos.decisionImitador2);
+  decisiones.add(sospechosos.decisionImitadorConTraicion);
   decisiones.add(sospechosos.decisionAgenteOriginal); 
   
   int enfrentadores = 0;   

@@ -2,8 +2,8 @@
 import java.util.Random;  
 
 public class Sospechosos {
- public int totalAnyosDeCarcel, anyosCarcelEgoista, anyosCarcelIngenuo, anyosCarcelAleatorio, anyosCarcelImitador, anyosCarcelImitador2, anyosCarcelAgenteOriginal; 
- public String decisionEgoista, decisionIngenuo, decisionAleatorio, decisionImitador, decisionImitador2, decisionAgenteOriginal; 
+ public int totalAnyosDeCarcel, anyosCarcelEgoista, anyosCarcelIngenuo, anyosCarcelAleatorio, anyosCarcelImitador, anyosCarcelImitadorConTraicion, anyosCarcelAgenteOriginal; 
+ public String decisionEgoista, decisionIngenuo, decisionAleatorio, decisionImitador, decisionImitadorConTraicion, decisionAgenteOriginal; 
  /*int totalAnyosDeCarcelAcumulados = egoista().totalAnyosDeCarcel + ingenuo().totalAnyosDeCarcel + aleatorio().totalAnyosDeCarcel + imitador().totalAnyosDeCarcel + 
  imitador2().totalAnyosDeCarcel + agenteOriginal().totalAnyosDeCarcel; */
  public void decisionEgoista () { //siempre confiesa, busca 0 años 
@@ -73,8 +73,16 @@ public class Sospechosos {
  
  public void anyosCarcelImitador ( int anyosDeCarcel) {
   this.anyosCarcelImitador = anyosDeCarcel; 
- }
+  }
 
+ public void decisionImitadorConTraicion () {
+  String decision = "no confieso"; 
+  
+ }
+  
+ public void anyosCarcelImitadorConTraicion (int anyosDeCarcel) {
+  this.anyosCarcelImitadorConTraicion = anyosDeCarcel;
+ } 
  public void decisionAgenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
   String decision =""; 
   this.decisionAgenteOriginal = decision; 
