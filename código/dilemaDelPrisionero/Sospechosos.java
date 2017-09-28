@@ -1,8 +1,7 @@
-
 import java.util.Random;  
 
 public class Sospechosos {
- public int totalAnyosDeCarcel, anyosCarcelEgoista, anyosCarcelIngenuo, anyosCarcelAleatorio, anyosCarcelImitador, anyosCarcelImitadorConTraicion, anyosCarcelAgenteOriginal; 
+ public int totalAnyosDeCarcel, totalAnyosCarcelEgoista, totalAnyosCarcelIngenuo, totalAnyosCarcelAleatorio, totalAnyosCarcelImitador, totalAnyosCarcelImitadorConTraicion, totalAnyosCarcelAgenteOriginal; 
  public String decisionEgoista, decisionIngenuo, decisionAleatorio, decisionImitador, decisionImitadorConTraicion, decisionAgenteOriginal; 
  /*int totalAnyosDeCarcelAcumulados = egoista().totalAnyosDeCarcel + ingenuo().totalAnyosDeCarcel + aleatorio().totalAnyosDeCarcel + imitador().totalAnyosDeCarcel + 
  imitador2().totalAnyosDeCarcel + agenteOriginal().totalAnyosDeCarcel; */
@@ -11,8 +10,8 @@ public class Sospechosos {
    this.decisionEgoista = decision; 
  } 
 
- public void anyosCarcelEgoista (int anyosDeCarcel) {
-  this.anyosCarcelEgoista = anyosDeCarcel; 
+ public void setAnyosCarcelEgoista (int anyosDeCarcel) {
+  this.totalAnyosCarcelEgoista = anyosDeCarcel; 
  }
  
  public void decisionIngenuo () { // nunca confiesa 
@@ -20,8 +19,8 @@ public class Sospechosos {
    this.decisionIngenuo = decision; 
  }
 
- public void anyosCarcelIngenuo (int anyosDeCarcel) {
-  this.anyosCarcelIngenuo = anyosDeCarcel; 
+ public void setAnyosCarcelIngenuo (int anyosDeCarcel) {
+  this.totalAnyosCarcelIngenuo = anyosDeCarcel; 
  } 
  
  public void decisionAleatorio () { // siempre es al azar
@@ -38,8 +37,8 @@ public class Sospechosos {
   this.decisionAleatorio = decision; 
  }
   
-  public void anyosCarcelAleatorio (int anyosDeCarcel) {
-  this.anyosCarcelAleatorio = anyosDeCarcel;     
+  public void setAnyosCarcelAleatorio (int anyosDeCarcel) {
+  this.totalAnyosCarcelAleatorio = anyosDeCarcel;     
  }
 
  public void decisionImitador () { // copia lo que hizo su rival en el turno anterior, primer turno aleatorio
@@ -71,24 +70,23 @@ public class Sospechosos {
   this.decisionImitador = decision; 
  }
  
- public void anyosCarcelImitador ( int anyosDeCarcel) {
-  this.anyosCarcelImitador = anyosDeCarcel; 
+ public void setAnyosCarcelImitador ( int anyosDeCarcel) {
+  this.totalAnyosCarcelImitador = anyosDeCarcel; 
   }
 
  public void decisionImitadorConTraicion () {
   String decision = "no confieso"; 
-  
  }
   
- public void anyosCarcelImitadorConTraicion (int anyosDeCarcel) {
-  this.anyosCarcelImitadorConTraicion = anyosDeCarcel;
+ public void setAnyosCarcelImitadorConTraicion (int anyosDeCarcel) {
+  this.totalAnyosCarcelImitadorConTraicion = anyosDeCarcel;
  } 
+ 
  public void decisionAgenteOriginal () { // estratégia de obtener menor cantidad de años en prisión
-  String decision =""; 
-  this.decisionAgenteOriginal = decision; 
+  String decision ="confieso"; 
  }
  
- public void anyosCarcelAgenteOriginal ( int anyosDeCarcel) {
- this.anyosCarcelAgenteOriginal = anyosDeCarcel; 
+ public void setAnyosCarcelAgenteOriginal ( int anyosDeCarcel) {
+ this.totalAnyosCarcelAgenteOriginal = anyosDeCarcel; 
 }
 }
