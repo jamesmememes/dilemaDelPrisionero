@@ -1,11 +1,10 @@
-import java.util.Scanner;
 
-public class Rondas
+public class Rondas extends MainJOption
 {
     public void rondas(){
-        Scanner input = new Scanner(System.in);
         
-        int numrondas = input.nextInt();
+        
+        int numrondas = numrondas; // Definir esta variable como la de numrondas en MAIN JOption y Consola
         
     }
     
