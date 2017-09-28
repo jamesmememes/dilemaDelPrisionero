@@ -27,6 +27,14 @@ public class Interfaz {
  InputStreamReader isr = new InputStreamReader(System.in);  // se crea un flujo de entrada de lo que pasa en el sistema
  BufferedReader br = new BufferedReader(isr); // almacenamos lo que estamos leyendo que proviene de isr
  // Buff.. br = new Buffe..(new InputStreamReader(System.in)); 
+ 
+ public void mostrarStringConsola (String mensaje, String titulo) {  
+   // AQUI PONER COMO EL BUFFERED READER ESCRIBE
+   //lO EQUIVALENTE A system.out.println
+   //por que aca MainConsole mada un String, que dice ESCOGA EL PRIMER SOSPECHOSO
+ }
+ 
+ 
  public String solicitarStringConsola (String mensaje) throws IOException { 
  String s = "";
  s = br.readLine(); 
